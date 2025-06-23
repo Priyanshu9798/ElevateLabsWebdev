@@ -1,0 +1,154 @@
+/* === CSS VARIABLES FOR DYNAMIC COLORS === */
+:root {
+  --primary-color: #0026e4;
+  --secondary-color: #ffffff;
+  --dark-bg: #121212;
+  --light-bg: #f9f9f9;
+  --text-light: #f7e99a;
+  --text-dark: #222;
+  --hover-color: #defbbb;
+  --footer-bg: #000000;
+}
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+
+/* === UTILITIES === */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === HEADER === */
+header {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  padding: 1rem 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* === HERO SECTION === */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+  color: var(--secondary-color);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  color: var(--secondary-color);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.socials a {
+  color: var(--text-light);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--primary-color);
+}
+
+/* === RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
