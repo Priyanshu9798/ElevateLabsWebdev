@@ -1,0 +1,135 @@
+/* Default (Light) Theme */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f9fc;
+  color: #111;
+  overflow-x: hidden;
+}
+
+a {
+  color: #0366d6;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 10px 16px;
+  color: #fff;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.menu-toggle,
+.theme-toggle {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.navbar {
+  display: none;
+  flex-direction: column;
+  background: #333;
+}
+
+.navbar a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border-top: 1px solid #444;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background: #444;
+}
+
+.navbar.active {
+  display: flex;
+}
+
+/* Content Sections */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.sidebar, .content {
+  background: #fff;
+  margin-bottom: 12px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #222;
+  }
+
+  .navbar a {
+    border: none;
+    padding: 12px 24px;
+  }
+
+  .container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+
+  .content {
+    flex: 3;
+  }
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #111;
+  color: #f1f1f1;
+}
+
+body.dark .sidebar,
+body.dark .content {
+  background: #1e1e1e;
+}
+
+body.dark .navbar {
+  background: #000;
+}
+
+body.dark .navbar a {
+  color: #ccc;
+}
+
+body.dark .navbar a:hover {
+  background: #111;
+}
+
+body.dark a {
+  color: #4fa8f6;
+}
